@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import it.allshop.webapp.controller.Application;
+import it.allshop.webapp.Application;
 import it.allshop.webapp.entity.BarcodeEntity;
 import it.allshop.webapp.repository.BarcodeRepository;
 

@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import it.allshop.webapp.controller.Application;
+import it.allshop.webapp.Application;
 import it.allshop.webapp.controller.ArticleWebService;
 
 @SpringBootTest(classes = Application.class)

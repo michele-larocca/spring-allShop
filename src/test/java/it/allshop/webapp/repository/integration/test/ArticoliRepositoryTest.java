@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 
-import it.allshop.webapp.controller.Application;
+import it.allshop.webapp.Application;
 import it.allshop.webapp.entity.ArticoliEntity;
 import it.allshop.webapp.repository.ArticoliRepository;
 
