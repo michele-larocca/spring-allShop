@@ -1,4 +1,4 @@
-package it.allshop.service.app;
+package it.allshop.webapp.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

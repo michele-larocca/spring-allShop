@@ -1,4 +1,4 @@
-package it.allshop.service.app;
+package it.allshop.webapp.controller.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -14,9 +14,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import it.allshop.service.app.ArticleWebService;
+import it.allshop.webapp.controller.Application;
+import it.allshop.webapp.controller.ArticleWebService;
 
-@SpringBootTest
+@SpringBootTest(classes = Application.class)
 @AutoConfigureMockMvc
 public class ArticleWebServiceTest {
 
@@ -33,7 +34,7 @@ public class ArticleWebServiceTest {
 	
 	@Test
 	public void getGreatingTest() throws Exception {
-		mvc.perform(get("/api/test").contentType(MediaType.APPLICATION_JSON))
+		mvc.perform(get("/api/articoli/test").contentType(MediaType.APPLICATION_JSON))
 		.andExpect(status().isOk())
 		.andExpect(jsonPath("$").value("Hello, this is a web service test!"))
 		.andDo(print());

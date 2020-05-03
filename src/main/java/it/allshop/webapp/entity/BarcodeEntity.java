@@ -1,4 +1,4 @@
-package it.allshop.entity;
+package it.allshop.webapp.entity;
 
 import java.io.Serializable;
 
@@ -11,12 +11,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
 @Table(name = "BARCODE")
-@Data
 public class BarcodeEntity implements Serializable
 { 
 	private static final long serialVersionUID = 1853763261962860635L;
@@ -34,4 +32,27 @@ public class BarcodeEntity implements Serializable
 	@JsonBackReference
 	private ArticoliEntity articolo;
 
+	public String getBarcode() {
+		return barcode;
+	}
+
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+
+	public String getIdTipoArt() {
+		return idTipoArt;
+	}
+
+	public void setIdTipoArt(String idTipoArt) {
+		this.idTipoArt = idTipoArt;
+	}
+
+	public ArticoliEntity getArticolo() {
+		return articolo;
+	}
+
+	public void setArticolo(ArticoliEntity articolo) {
+		this.articolo = articolo;
+	}
 }

@@ -1,4 +1,4 @@
-package it.allshop.entity;
+package it.allshop.webapp.entity;
 
 import java.util.HashSet;
 import java.util.Set;

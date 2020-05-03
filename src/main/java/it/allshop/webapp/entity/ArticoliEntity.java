@@ -1,4 +1,4 @@
-package it.allshop.entity;
+package it.allshop.webapp.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -20,11 +20,8 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import lombok.Data;
-
 @Entity
 @Table(name = "ARTICOLI")
-@Data
 public class ArticoliEntity implements Serializable {
 
 	private static final long serialVersionUID = 8173042270637182962L;
@@ -69,5 +66,100 @@ public class ArticoliEntity implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "IDFAMASS", referencedColumnName = "ID")
 	private FamAssortEntity famAssort;
-	
+
+	public String getCodArt() {
+		return codArt;
+	}
+
+	public void setCodArt(String codArt) {
+		this.codArt = codArt;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public String getUm() {
+		return um;
+	}
+
+	public void setUm(String um) {
+		this.um = um;
+	}
+
+	public String getCodStat() {
+		return codStat;
+	}
+
+	public void setCodStat(String codStat) {
+		this.codStat = codStat;
+	}
+
+	public Integer getPzCart() {
+		return pzCart;
+	}
+
+	public void setPzCart(Integer pzCart) {
+		this.pzCart = pzCart;
+	}
+
+	public double getPesoNetto() {
+		return pesoNetto;
+	}
+
+	public void setPesoNetto(double pesoNetto) {
+		this.pesoNetto = pesoNetto;
+	}
+
+	public String getIdStatoArt() {
+		return idStatoArt;
+	}
+
+	public void setIdStatoArt(String idStatoArt) {
+		this.idStatoArt = idStatoArt;
+	}
+
+	public Date getDataCreaz() {
+		return dataCreaz;
+	}
+
+	public void setDataCreaz(Date dataCreaz) {
+		this.dataCreaz = dataCreaz;
+	}
+
+	public Set<BarcodeEntity> getBarcode() {
+		return barcode;
+	}
+
+	public void setBarcode(Set<BarcodeEntity> barcode) {
+		this.barcode = barcode;
+	}
+
+	public IngredientiEntity getIngredienti() {
+		return ingredienti;
+	}
+
+	public void setIngredienti(IngredientiEntity ingredienti) {
+		this.ingredienti = ingredienti;
+	}
+
+	public IvaEntity getIva() {
+		return iva;
+	}
+
+	public void setIva(IvaEntity iva) {
+		this.iva = iva;
+	}
+
+	public FamAssortEntity getFamAssort() {
+		return famAssort;
+	}
+
+	public void setFamAssort(FamAssortEntity famAssort) {
+		this.famAssort = famAssort;
+	}
 }

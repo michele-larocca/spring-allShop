@@ -3,10 +3,10 @@ server:
 spring:
   datasource:
     initialization-mode: always
-    password: admin
     platform: postgres
-    url: jdbc:postgresql://127.0.0.1:59853/allshop
+    url: jdbc:postgresql://localhost:5432/allshop
     username: postgres
+    password: admin
   jpa:
     hibernate:
       ddl-auto: none

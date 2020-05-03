@@ -1,4 +1,4 @@
-package it.allshop.entity;
+package it.allshop.webapp.entity;
 
 import java.io.Serializable;
 
