@@ -34,7 +34,9 @@ public class ArticoliRepositoryTest {
 	
 	@Test
 	public void findByCodArtTest() {
-		assertThat(articoliRepo.findByCodArt("ACQUA ULIVETO%"))
+		ArticoliEntity articolo = articoliRepo.findByCodArt("002000301");
+		assertThat(articolo).isNotNull();
+		assertThat(articoliRepo.findByCodArt("002000301"))
 				.extracting(ArticoliEntity::getDescrizione).isEqualTo("ACQUA ULIVETO 15 LT");
 	}
 	
