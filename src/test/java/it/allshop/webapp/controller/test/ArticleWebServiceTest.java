@@ -15,7 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import it.allshop.webapp.Application;
-import it.allshop.webapp.controller.ArticleWebService;
+import it.allshop.webapp.controller.ArticoliWebService;
 
 @SpringBootTest(classes = Application.class)
 @AutoConfigureMockMvc
@@ -25,7 +25,7 @@ public class ArticleWebServiceTest {
 	private MockMvc mvc;
 	
 	@Autowired
-	private ArticleWebService service;
+	private ArticoliWebService service;
 	
 	@Test
 	public void serviceShouldNotBeNull() {
