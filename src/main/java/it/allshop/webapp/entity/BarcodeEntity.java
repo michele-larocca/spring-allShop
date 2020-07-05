@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -21,9 +23,12 @@ public class BarcodeEntity implements Serializable
 	
 	@Id
 	@Column(name = "BARCODE")
+	@Size(min = 8, max = 13, message = "{Size.Barcode.barcode.Validation}")
+	@NotNull(message = "{NotNull.Barcode.barcode.Validation}")
 	private String barcode;
 	
 	@Column(name = "IDTIPOART")
+	@NotNull(message = "{NotNull.Barcode.idTipoArt.Validation}")
 	private String idTipoArt;
 	
 	@ManyToOne

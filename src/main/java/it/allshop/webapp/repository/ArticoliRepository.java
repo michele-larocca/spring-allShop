@@ -11,7 +11,7 @@ import it.allshop.webapp.entity.ArticoliEntity;
 
 public interface ArticoliRepository extends PagingAndSortingRepository<ArticoliEntity, String>{
 
-	@Query(value = "SELECT * FROM ARTICOLI WHERE DESCRIZIONE LIKE :desArt", nativeQuery = true)
+	@Query(value = "SELECT * FROM ARTICOLI WHERE lower(DESCRIZIONE) LIKE lower(:desArt)", nativeQuery = true)
 	public List<ArticoliEntity> selByDescrizioneLike(@Param("desArt") String descrizione);
 
 	public List<ArticoliEntity> findByDescrizioneLike(String description, Pageable pageable);

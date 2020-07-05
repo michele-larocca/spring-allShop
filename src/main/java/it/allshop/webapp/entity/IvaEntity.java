@@ -12,11 +12,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
-import lombok.Data;
-
 @Entity
 @Table(name = "IVA")
-@Data
 public class IvaEntity {
 	@Id
 	@Column(name = "IDIVA")
@@ -31,4 +28,36 @@ public class IvaEntity {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "iva")
 	@JsonBackReference
 	private Set<ArticoliEntity> articoli = new HashSet<>();
+
+	public int getIdIva() {
+		return idIva;
+	}
+
+	public void setIdIva(int idIva) {
+		this.idIva = idIva;
+	}
+
+	public String getDescrizione() {
+		return descrizione;
+	}
+
+	public void setDescrizione(String descrizione) {
+		this.descrizione = descrizione;
+	}
+
+	public int getAliquota() {
+		return aliquota;
+	}
+
+	public void setAliquota(int aliquota) {
+		this.aliquota = aliquota;
+	}
+
+	public Set<ArticoliEntity> getArticoli() {
+		return articoli;
+	}
+
+	public void setArticoli(Set<ArticoliEntity> articoli) {
+		this.articoli = articoli;
+	}
 }
